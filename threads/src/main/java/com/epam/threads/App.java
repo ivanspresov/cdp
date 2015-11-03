@@ -1,4 +1,4 @@
-package org.threads;
+package com.epam.threads;
 
 /**
  * Hello world!
