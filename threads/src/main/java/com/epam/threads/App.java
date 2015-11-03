@@ -1,13 +1,14 @@
 package com.epam.threads;
 
+import org.apache.log4j.Logger;
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
-	public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+public class App {
+	final static Logger logger = Logger.getLogger(App.class);
+	public static void main(String[] args) {
+		logger.info("Hello World!");
+	}
 }
