@@ -13,6 +13,7 @@ public class App {
 		Thread currentThread = Thread.currentThread();
 		//playing with minimal priority for main thread
 		currentThread.setPriority(Thread.MIN_PRIORITY);
+		currentThread.setName("Main Thread");
 		logger.info("Current Thread Name=" + currentThread.getName());
 		logger.info("Current Thread Priority=" + currentThread.getPriority());
 		logger.info("Current Thread Alive=" + currentThread.isAlive());
