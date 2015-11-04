@@ -22,8 +22,6 @@ public class App {
 		thread.setPriority(Thread.MAX_PRIORITY);
 		logger.info("Start working thread");
 		thread.start();
-		//WrapperRunnableThread - medium priority
-		new WrapperRunnableThread();
 		currentThread = Thread.currentThread();
 		logger.info(currentThread);
 	}
