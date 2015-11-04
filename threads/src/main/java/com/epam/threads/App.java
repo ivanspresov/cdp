@@ -11,11 +11,17 @@ public class App {
 	public static void main(String[] args) {
 		logger.info("Start main thread");
 		Thread currentThread = Thread.currentThread();
+		//playing with minimal priority for main thread
+		currentThread.setPriority(Thread.MIN_PRIORITY);
 		logger.info("Current Thread Name=" + currentThread.getName());
 		logger.info("Current Thread Priority=" + currentThread.getPriority());
 		logger.info("Current Thread Alive=" + currentThread.isAlive());
 		Thread thread = new Thread(new WorkingThread());
+		//playing with maximum priority for working thread
+		thread.setPriority(Thread.MAX_PRIORITY);
 		logger.info("Start working thread");
 		thread.start();
+		currentThread = Thread.currentThread();
+		logger.info(currentThread);
 	}
 }
